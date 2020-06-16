@@ -57,6 +57,8 @@ void motor_init(void)
     pinMode(PWM_RIGHT, OUTPUT);  //Motor Right Backward
     pinMode(DIR_RIGHT, OUTPUT); //Motor Right Forward
 
+    pinMode(TACH_LEFT, INPUT);
+    pinMode(TACH_RIGHT, INPUT);
     attachInterrupt(digitalPinToInterrupt(TACH_LEFT), left_tri, RISING);
     attachInterrupt(digitalPinToInterrupt(TACH_RIGHT), right_tri, RISING);
 }
