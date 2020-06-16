@@ -27,4 +27,5 @@ void loop()
     pixels.setPixelColor(0, pixels.Color(r0,g0,b0)); //设定第一个灯珠颜色RGB(0~255)
     pixels.setPixelColor(1, pixels.Color(r1,g1,b1)); //设定第二个灯珠颜色
     pixels.show();  //显示设定好的颜色
+    delay(1);       //必须加入延时否则WS2811可能无法正常显示
 }
