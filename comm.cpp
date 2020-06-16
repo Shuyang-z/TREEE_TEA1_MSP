@@ -15,26 +15,26 @@ void shift_reg_init(void)
 void reload_shift_reg(void)
 {
     char i = 0;
-    CLK_0;
-    LOAD;
+    H165_CLK_0;
+    H165_LOAD;
     sensor.reg0 = 0;
     sensor.reg1 = 0;
     
     for (i = 0; i < 8; i++)
     {
         sensor.reg0 <<= 1;
-        if (MISO)
+        if (H165_MISO)
             sensor.reg0 |= 0x01;
-        CLK_1;
-        CLK_0;
+        H165_CLK_1;
+        H165_CLK_0;
     }
     for (i = 0; i < 8; i++)
     {
         sensor.reg1 <<= 1;
-        if (MISO)
+        if (H165_MISO)
             sensor.reg1 |= 0x01;
-        CLK_1;
-        CLK_0;
+        H165_CLK_1;
+        H165_CLK_0;
     }
 
     sensor.ir_left_3 = !!(sensor.reg0&(1<<0));
