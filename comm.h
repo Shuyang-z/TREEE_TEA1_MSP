@@ -2,10 +2,10 @@
 #define __COMM_H___
 
 
-#define LOAD  digitalWrite(8, 0); delay(1);digitalWrite(8, 1)
-#define CLK_0 digitalWrite(7, 0)
-#define CLK_1 digitalWrite(7, 1)
-#define MISO  digitalRead(14)
+#define H165_LOAD  digitalWrite(8, 0); delay(1);digitalWrite(8, 1)
+#define H165_CLK_0 digitalWrite(7, 0)
+#define H165_CLK_1 digitalWrite(7, 1)
+#define H165_MISO  digitalRead(14)
 
 struct SENSORS
 {
