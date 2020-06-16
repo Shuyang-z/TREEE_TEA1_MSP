@@ -13,6 +13,7 @@ void setup()
     pixels.setPixelColor(0, pixels.Color(0,100,0));
     pixels.setPixelColor(1, pixels.Color(0,100,0));
     pixels.show();
+    delay(1);  //必须加入延时否则WS2811可能无法正常显示
 }
 void loop()                                                                             
 {
